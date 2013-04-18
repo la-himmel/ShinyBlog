@@ -1,0 +1,29 @@
+<table>
+  
+<% @entries.each do |entry| %>
+  <tr><div id="entry">
+    <p>
+      <h2><b><%= link_to entry.title, entry %></b></h2>
+    </p>
+
+    <p>
+      <%= entry.body %>
+    </p>
+
+    <p>
+      <b>Tag:</b>
+      <%= entry.tag %>
+    </p>
+
+    <p>
+      <%= entry.date %>
+    </p>
+  </div></tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Entry', new_entry_path %>
+
+

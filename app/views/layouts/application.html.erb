@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yekaterina Zhmud</title>  
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="main">
+	  <div id="banner">          
+      <font><%= @page_title || "My shiny blog" %></font>
+    </div>
+  
+    <div id="columns">
+      <div id="links">
+      	<table align=left>
+      		<tr>
+      			<td width=25%>
+      				<a href="http://www....">Home</a>
+      			</td>
+      			<td width=25%>
+      			  <a href="http://www..../faq">Questions</a>
+      			</td>
+      			<td width=25%>
+      			  <a href="http://www..../news">News</a>
+      			</td>
+      			<td width=25%>
+      			  <a href="http://www..../contact">Contact</a>
+      			</td>
+      		</tr>
+      	</table>
+      </div><br />
+      <div id="content">
+        <%= yield %>
+      </div>    
+    </div>
+  </div>
+</body>
+</html>
