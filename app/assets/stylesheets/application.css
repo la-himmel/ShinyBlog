@@ -18,7 +18,11 @@ a:active  { color:#565656; }
 #banner {
   background: url(title.jpg);  
   border-bottom: 2px solid;
-  font: small-caps 65px/65px "Times New Roman", serif;
+  
+  font-family: 'Dancing Script', Georgia, Times, serif;
+  font-size: 79px;
+  line-height: 60px;
+  
   color: #ffffff;      
   height: 200px;  
   padding-left: 0px;
@@ -28,7 +32,7 @@ a:active  { color:#565656; }
 }
 
 #banner font {
-	vertical-align: -223%;    
+	vertical-align: -210%;    
 }
 
 #banner img {
@@ -41,12 +45,14 @@ a:active  { color:#565656; }
 
 /* ----------- Links ----------- */
 #links {
-	font: small-caps 15px/15px "Times New Roman", serif;
-	color: red;	
+	//font: small-caps 15px/15px "Times New Roman", serif;
+	//font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+	background: #efefef;
 }
 
 #links table {
-	width: 30%;
+	width: 100%;
 	background: #efefef;
 	text-align: center;	
 }
@@ -56,9 +62,18 @@ a:active  { color:#565656; }
 #entry {	
 	color: #666a96;		
 	font-size: 15px;
-	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+	font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+  line-height: 25px;
+
+	//font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 	border-bottom: 1px dotted #eeeeee;
 	border-top: 1px dotted #eeeeee;
+}
+
+#entry h2 {
+  font-family: 'Arvo', Georgia, Times, serif;
+  font-size: 30px;
+  line-height: 40px;
 }
 
 #entry .date {
