@@ -1,25 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div id="entry">
+  <p>
+    <h2><b><%= @entry.title %></b></h2>
+  </p>
 
-<p>
-  <b>Title:</b>
-  <%= @entry.title %>
-</p>
+  <p>
+    <%= @entry.body %>
+  </p>
 
-<p>
-  <b>Body:</b>
-  <%= @entry.body %>
-</p>
+  <p>
+    <b>Tag:</b>
+    <%= @entry.tag %>
+  </p>
 
-<p>
-  <b>Tag:</b>
-  <%= @entry.tag %>
-</p>
-
-<p>
-  <b>Date:</b>
-  <%= @entry.date %>
-</p>
-
+  <p>
+    <%= @entry.date %>
+  </p>
+</div>
 
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>

@@ -5,9 +5,9 @@
     <p>
       <h2><b><%= link_to entry.title, entry %></b></h2>
     </p>
-
+    
     <p>
-      <%= entry.body %>
+      <%= entry.body.html_safe %>      
     </p>
 
     <p>
@@ -15,9 +15,10 @@
       <%= entry.tag %>
     </p>
 
-    <p>
+    <p class="date">
       <%= entry.date %>
     </p>
+
   </div></tr>
 <% end %>
 </table>
