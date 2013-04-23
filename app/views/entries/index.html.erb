@@ -1,12 +1,16 @@
+<div id="entry_options">
+	<% if session[:user_id] %>
+	  	<%= link_to image_tag("np.png", :border => 0, :title => "New entry"), new_entry_path %>
+	  	<%= link_to image_tag("el.png", :border => 0, :title => "Entry list"), login_path, :method => :create %>
+	  	<%= link_to image_tag("se.png", :border => 0, :title => "Some another option"), login_path, :method => :create %>
+  <% end %>	
+</div>
+
 <table>
-  
+	
 <% @entries.each do |entry| %>
   <tr><%= render entry %></tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Entry', new_entry_path %>
-
-

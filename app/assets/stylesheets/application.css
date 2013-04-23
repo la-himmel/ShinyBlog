@@ -82,3 +82,21 @@ a:active  { color:#565656; }
 	font-size: 10px;	
 	margin-bottom: 5px;
 }
+
+#ft img {
+  float: left;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-top: -15px;  
+}
+
+#entry_options img {
+  float: right;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;  
+  margin-bottom: -5px;
+  margin-left: 10px;
+}

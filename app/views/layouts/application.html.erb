@@ -10,9 +10,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div id="main">
-	  <div id="banner">          
+	<div id="main">		
+	  <div id="banner">
+	  <% if session[:user_id] %>          
+      <font><%= @page_title || "Your shiny blog" %></font>
+    <% else %>
       <font><%= @page_title || "My shiny blog" %></font>
+    <% end %>
     </div>
   
     <div id="columns">
@@ -31,17 +35,22 @@
       			<td width=7%>
       			  <a href="http://www..../contact">Contact</a>
       			</td>
-      			<td width=72%>      			  
-      			</td>
+      			<td width=72%>   		    			
+      			</td>      		
       		</tr>
       	</table>
       </div><br />
       <div id="content">
         <%= yield %>
       </div>    
-    </div>
-    <div id="ft">
-      <small>Yekaterina Zhmud, 2013</small>
+    </div><br /><br />
+    <div id="ft">      
+      <% if session[:user_id] %>
+      	<%= link_to image_tag("logout2.png", :border => 0), logout_path, :method => :delete %>
+      <% else %>
+        <%= link_to image_tag("logout2.png", :border => 0), login_path, :method => :create %>
+	    <% end %>	
+	    Yekaterina Zhmud, 2013	  
     </div>
   </div>
 </body>
