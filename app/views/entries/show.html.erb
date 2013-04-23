@@ -1,21 +1,4 @@
-<div id="entry">
-  <p>
-    <h2><b><%= @entry.title %></b></h2>
-  </p>
-
-  <p>
-    <%= @entry.body.html_safe %>    
-  </p>
-
-  <p>
-    <b>Tag:</b>
-    <%= @entry.tag %>
-  </p>
-
-  <p>
-    <%= @entry.date %>
-  </p>
-</div>
+<%= render @entry %>
 
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>
