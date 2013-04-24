@@ -127,36 +127,22 @@ a:active  { color:#565656; }
 }
 
 /* ----------- Entry form ----------- */
-.post_form fieldset { 
-  background: #efe;
+#post_form {   
+  margin-right: auto;
+  margin-left: auto;
+  width: 800px;
 }
 
-.post_form legend {
-  color: #dfd;
-  background: #141;
-  font-family: sans-serif;
-  padding: 0.2em 1em;
-}
-
-.post_form label { 
-  width: 5em;
-  float: left;
-  text-align: right;
-  padding-top: 0.2em;
-  margin-right: 0.1em;
-  display: block;
-}
-
-.post_form select, .depot_form textarea, .depot_form input {
+#post_form select {
   margin-left: 0.5em;
 }
 
-.post_form .sumbit_berry .image_submit_tag {
+#post_form .sumbit_berry img {
   margin-left: 4em;
   float: right;
 }
 
-.post_form div {
+#post_form div {
   margin: 0.5em 0;
 }
 

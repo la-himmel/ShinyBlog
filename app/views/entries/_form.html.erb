@@ -13,13 +13,13 @@
 
 <br /><br />
   <div class="field">    
-    <%= f.text_field :title, :size => 105%>
+    <%= f.text_field :title, :size => 105, :placeholder => "Title" %>
   </div>
   <div class="field">    
-    <%= f.text_area :body, :rows => 10, :cols => 80 %>
+    <%= f.text_area :body, :rows => 10, :cols => 80, :placeholder => "Entry text" %>
   </div>
   <div class="field">
-    <%= f.text_area :tag, :rows => 1, :cols => 80 %>
+    <%= f.text_area :tag, :rows => 1, :cols => 80, :placeholder => "Tags" %>
   </div>
   <div class="field">    
     <%= f.date_select :date %>
