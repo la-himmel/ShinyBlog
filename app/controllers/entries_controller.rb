@@ -1,7 +1,17 @@
 class EntriesController < ApplicationController
+  skip_before_filter :authorize, :only => [:index, :show]
   # GET /entries
   # GET /entries.json
   def index
+    @entries = Entry.find(:all, :order => 'created_at DESC')
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @entries }
+    end
+  end
+
+  def entry_list
     @entries = Entry.find(:all, :order => 'created_at DESC')
 
     respond_to do |format|

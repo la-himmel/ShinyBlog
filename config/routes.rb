@@ -7,10 +7,11 @@ Blog::Application.routes.draw do
   end
 
   get "entries/index"
+
+  match "/entries/all" => "entries#entry_list"
   resources :entries
 
   root :to => 'entries#index', :as => 'store'
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

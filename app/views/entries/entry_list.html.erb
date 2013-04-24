@@ -1,0 +1,26 @@
+<div id="entry_list">
+  <table>
+    <% @entries.each do |entry| %>
+      <tr> 
+        <td width=70%>
+          <h3><b><%= link_to entry.title, entry %></b></h3>
+        </td>
+
+        <td>      
+          <p class="date"><%= entry.date %></p>
+        </td>
+
+        <td>
+          <%= link_to image_tag("el.png", :border => 0, :title => "Edit"), edit_entry_path(entry) %>              
+        </td>      
+
+        <td>
+          <%= link_to image_tag("np.png", :border => 0, :title => "Delete"), entry, :method => :delete, data: { confirm: 'Are you sure?' }  %>          
+        </td>       
+        
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+

@@ -27,15 +27,15 @@
       				<a href="/entries">Home</a>
       			</td>
       			<td width=7%>
-      			  <a href="http://www..../faq">Questions</a>
+      			  <a href="/shop">Shop</a>
       			</td>
       			<td width=7%>
-      			  <a href="http://www..../news">News</a>
+      			  <a href="/about">About</a>
       			</td>
-      			<td width=7%>
-      			  <a href="http://www..../contact">Contact</a>
+      			<td width=10%>
+      			  <a href="/contact">Contact</a>
       			</td>
-      			<td width=72%>   		    			
+      			<td width=69%>   		    			
       			</td>      		
       		</tr>
       	</table>
@@ -46,9 +46,9 @@
     </div><br /><br />
     <div id="ft">      
       <% if session[:user_id] %>
-      	<%= link_to image_tag("logout2.png", :border => 0), logout_path, :method => :delete %>
+      	<%= link_to image_tag("logout.png", :border => 0), logout_path, :method => :delete %>
       <% else %>
-        <%= link_to image_tag("logout2.png", :border => 0), login_path, :method => :create %>
+        <%= link_to image_tag("login.png", :border => 0), login_path, :method => :create %>
 	    <% end %>	
 	    Yekaterina Zhmud, 2013	  
     </div>
