@@ -4,6 +4,7 @@ class EntriesController < ApplicationController
   # GET /entries.json
   def index
     @entries = Entry.find(:all, :order => 'created_at DESC')
+    @show_comments = TRUE
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,6 +26,7 @@ class EntriesController < ApplicationController
   def show
     @entry = Entry.find(params[:id])
     @comment = Comment.new(:entry => @entry )
+    @show_comments = FALSE
     
     respond_to do |format|
       format.html # show.html.erb

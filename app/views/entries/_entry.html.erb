@@ -6,10 +6,12 @@
   <br /><br />
   <b>Tag:</b><%= entry.tag %>
 
-  <div class="comment_link">
-    <% if entry.comments.count > 0 %>
-      <%= link_to "Comments: #{entry.comments.count}", entry %>           
-    <% end %>
-  </div>
+  <% if @show_comments %>
+    <div class="comment_link">
+      <% if entry.comments.count > 0 %>
+        <%= link_to "Comments: #{entry.comments.count}", entry %>           
+      <% end %>
+    </div>
+  <% end %>
 </div>
 <br />
