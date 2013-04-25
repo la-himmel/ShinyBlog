@@ -1,5 +1,8 @@
 Blog::Application.routes.draw do
   
+  resources :comments
+
+
   controller :sessions do
     get 'login' => :new
     post 'login' => :create

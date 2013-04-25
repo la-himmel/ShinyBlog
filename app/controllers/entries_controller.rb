@@ -24,7 +24,8 @@ class EntriesController < ApplicationController
   # GET /entries/1.json
   def show
     @entry = Entry.find(params[:id])
-
+    @comment = Comment.new(:entry => @entry )
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @entry }

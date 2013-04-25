@@ -1,4 +1,26 @@
 <%= render @entry %>
 
+<%= render :partial => 'comment', :collection => @entry.comments %>
+
+<hr />
+<div id="post_form">
+	<%= form_for @comment do |c| %>  
+		<div class="field">  	  
+		  <%= c.text_field :name, :size=> 35, :placeholder => "Name" %>	  		
+		  <%= c.text_field :email, :size => 35, :placeholder => "Email" %>	  
+		</div>
+
+		<div class="field">  
+		  <%= c.text_area :body,  :rows => 10, :cols => 59, :placeholder => "Comment" %>	  
+		</div>
+
+		<div class="field">  
+		  <%= c.submit "Post Comment" %>	  
+		</div>
+
+		<%= c.hidden_field :entry_id, value: @entry.id %>	  		
+	<% end %>
+</div>
+
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>
