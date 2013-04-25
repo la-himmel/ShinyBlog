@@ -66,8 +66,8 @@ a:active  { color:#565656; }
   line-height: 25px;
 
 	//font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
-	border-bottom: 1px dotted #eeeeee;
-	border-top: 1px dotted #eeeeee;
+	//border-bottom: 1px dotted #eeeeee;
+	//border-top: 1px dotted #eeeeee;
 }
 
 #entry h2 {
@@ -77,10 +77,12 @@ a:active  { color:#565656; }
 }
 
 #entry .date {
+  font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 	text-align: right;
 	color: #bbbbbb;	
-	font-size: 10px;	
-	margin-bottom: 5px;
+	font-size: 15px;	
+	margin-top: 0px;
+  margin-bottom: -30px;
 }
 
 #ft img {
@@ -88,7 +90,11 @@ a:active  { color:#565656; }
   padding-left: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
-  padding-top: -15px;  
+  padding-top: -5px;  
+}
+
+#entry .comment_link {
+  float: right;
 }
 
 #entry_options img {
@@ -97,8 +103,9 @@ a:active  { color:#565656; }
   padding-right: 0px;
   padding-bottom: 0px;
   padding-top: 0px;  
-  margin-bottom: -5px;
+  margin-bottom: -5px;  
   margin-left: 10px;
+
 }
 
 /* ----------- Entry list ----------- */
@@ -121,7 +128,8 @@ a:active  { color:#565656; }
 }
 
 #entry_list .date {
-  font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;  
+  //font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;  
+  font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
   color: #bbbbbb; 
   font-size: 20px;    
 }
@@ -144,5 +152,36 @@ a:active  { color:#565656; }
 
 #post_form div {
   margin: 0.5em 0;
+}
+
+/* ----------- Comments ----------- */
+#comment h4 {
+  color: #666666;   
+  font-size: 15px;
+  font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+  line-height: 25px;
+}
+
+#comment {
+  color: #666666;   
+  font-size: 15px;
+  font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+  //font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+  line-height: 25px;
+}
+
+#comment .date {
+  text-align: right;
+  color: #bbbbbb; 
+  font-size: 10px;  
+  margin-bottom: 5px;
+}
+
+#comment img {
+  float: right;
+  //padding-left: 0px;
+  //padding-right: 0px;
+  //padding-bottom: 0px;
+  //padding-top: 0px;  
 }
 

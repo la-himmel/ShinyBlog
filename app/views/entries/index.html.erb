@@ -5,11 +5,10 @@
 	  	<%= link_to image_tag("se.png", :border => 0, :title => "Some another option"), login_path, :method => :create %>
   <% end %>	
 </div>
-
-<table>
-	
-<% @entries.each do |entry| %>
-  <tr><%= render entry %></tr>
+<br /><br />
+<table>	
+	<% @entries.each do |entry| %>
+	  <tr><%= render entry %></tr>
 <% end %>
 </table>
 
