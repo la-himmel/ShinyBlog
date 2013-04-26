@@ -4,7 +4,15 @@
   
   <%= entry.body.html_safe %>      
   <br /><br />
-  <b>Tag:</b><%= entry.tag %>
+  <% tags = entry.tag.split(/,/) %><%= " " %>
+  <% if tags.count > 0 %>
+    <b>Tags:</b>
+    <% tags.each do |tag| %>
+      <%= link_to tag, '/tags/1' %>      
+    <% end %>
+  
+  <% end %>
+  
 
   <% if @show_comments %>
     <div class="comment_link">

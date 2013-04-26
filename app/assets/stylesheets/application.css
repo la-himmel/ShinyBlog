@@ -83,6 +83,7 @@ a:active  { color:#565656; }
 	font-size: 15px;	
 	margin-top: 0px;
   margin-bottom: -30px;
+  float: right;
 }
 
 #ft img {
@@ -164,8 +165,7 @@ a:active  { color:#565656; }
 #comment {
   color: #666666;   
   font-size: 15px;
-  font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
-  //font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+  font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;  
   line-height: 25px;
 }
 
@@ -177,10 +177,6 @@ a:active  { color:#565656; }
 }
 
 #comment img {
-  float: right;
-  //padding-left: 0px;
-  //padding-right: 0px;
-  //padding-bottom: 0px;
-  //padding-top: 0px;  
+  float: right;  
 }
 
