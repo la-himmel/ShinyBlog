@@ -27,12 +27,32 @@ class EntriesController < ApplicationController
     @entry = Entry.find(params[:id])
     @comment = Comment.new(:entry => @entry )
     @show_comments = FALSE
+
+
+    @tags = @entry.tag.split(/,/)
+    @tags.each do |tag| 
+      @t = Tag.find_or_create_by_body(tag.strip)
+      @t.save
+ 
+      @tagging = Tagging.find_or_create_by_entry_id_and_tag_id(:entry_id => @entry.id, :tag_id => @t.id)
+      @tagging.save
+    end  
     
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @entry }
     end
   end
+
+  def show_by_tag
+    @entries = Entry.find_by_tag(params[:tag], :order => 'created_at DESC')
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @entries }
+    end
+  end
+
 
   # GET /entries/new
   # GET /entries/new.json

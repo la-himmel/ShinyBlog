@@ -1,0 +1,9 @@
+<p>Results for <b><%= @tag.body %></b></p>
+
+<table>	
+	<% @tag.entries.each do |entry| %>
+	  <tr><%= render entry %></tr>
+<% end %>
+</table>
+
+<%= link_to 'Back', tags_path %>

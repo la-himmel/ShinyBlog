@@ -1,5 +1,8 @@
 Blog::Application.routes.draw do
   
+  resources :tags
+
+
   resources :comments
 
 
@@ -12,6 +15,8 @@ Blog::Application.routes.draw do
   get "entries/index"
 
   match "/entries/all" => "entries#entry_list"
+  match "/tag/tag_id" => "entries#show_by_tag"
+
   resources :entries
 
   root :to => 'entries#index', :as => 'store'
